@@ -1,0 +1,28 @@
+sivep:
+  path: \\10.61.0.112\\Obitos\\IMUNO29ABR2025\\SIVEP
+  filenames: [SRAGHOSPITALIZADO2475742_00_2023.dbf, SRAGHOSPITALIZADO2481880_00_2024.dbf, SRAGHOSPITALIZADO2481843_00_2025.dbf]
+  start_day: 2023-12-31
+  type_of_date_start_day: DT_SIN_PRI
+
+sim:
+  path: \\10.61.0.112\\Obitos\\IMUNO29ABR2025\\SIM
+  filenames: [DOCE2024.dbf, DOCE2025.dbf]
+
+database:
+  path: C:\Users\higor.monteiro\Documents\data\sesa\rotina_imunopreviniveis\sim_sivep_29abr25
+  name: sim_sivep_imuno_rotina_29abr25.db
+  excel_name: cruzamento_prob_sivep_sim_29abr2025.xlsx
+  field_id: ID
+  insert_batchsize: 5000
+  frac_list: [0.5, 1.0]
+
+previous_database:
+  path: C:\Users\higor.monteiro\Documents\data\sesa\rotina_imunopreviniveis\sim_sivep_22abr25
+  name: sim_sivep_imuno_rotina_22abr25.db
+  excel_name: cruzamento_prob_sivep_sim_22abr2025.xlsx
+
+models:
+  path: C:\Users\higor.monteiro\Documents\code\lente-ist\lente_ist\ml_models
+  gbt_filename: GRADBOOST_SIVEP04SET2023.joblib
+  rnf_filename: RANDFOREST_SIVEP04SET2023.joblib
+  lgt_filename: LOGITREG_SIVEP04SET2023.joblib

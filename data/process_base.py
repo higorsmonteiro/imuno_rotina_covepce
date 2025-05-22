@@ -1,7 +1,7 @@
 import re
 import numpy as np
 import pandas as pd
-import lente_ist.utils as utils
+import data.utils as utils
 
 class ProcessBase:
     '''

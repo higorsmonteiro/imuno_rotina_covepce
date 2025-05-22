@@ -1,13 +1,10 @@
-import os
-import json
-import numpy as np
 import pandas as pd
 import recordlinkage
 from recordlinkage.index import SortedNeighbourhood
 
 # -- fix this
-from lente_ist.data_matching import MatchingBase
-import lente_ist.data_matching.utils as utils
+from matching.matching_base import MatchingBase
+import matching.utils as utils
 
 class Deduple(MatchingBase):
 

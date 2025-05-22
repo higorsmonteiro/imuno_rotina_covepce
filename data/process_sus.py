@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-import utils
-from process_base import ProcessBase 
+import data.utils as utils
+from data.process_base import ProcessBase 
 
 class ProcessSus(ProcessBase):
     db_type = "SINAN"

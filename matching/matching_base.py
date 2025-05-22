@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import recordlinkage
 
-import lente_ist.data_matching.utils as matching_utils
+import matching.utils as matching_utils
 
 class MatchingBase:
     '''

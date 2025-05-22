@@ -1,0 +1,37 @@
+sivep:
+  path: \\10.61.0.112\\Obitos\\IMUNO13MAI2025\\SIVEP
+  filenames: [SRAGHOSPITALIZADO2486527_00_2023.dbf, SRAGHOSPITALIZADO2481880_00_2024.dbf, SRAGHOSPITALIZADO2493185_00_2025.dbf]
+  start_day: 2023-12-31
+  type_of_date_start_day: DT_SIN_PRI
+
+sim:
+  path: \\10.61.0.112\\Obitos\\IMUNO13MAI2025\\SIM
+  filenames: [DOCE2024.dbf, DOCE2025.dbf]
+
+database:
+  path: C:\Users\higor.monteiro\Documents\data\sesa\rotina_imunopreviniveis\sim_sivep_13mai25
+  name: sim_sivep_imuno_rotina_13mai25.db
+  excel_name: cruzamento_prob_sivep_sim_13mai2025.xlsx
+  field_id: ID
+  insert_batchsize: 5000
+  
+
+previous_database:
+  path: C:\Users\higor.monteiro\Documents\data\sesa\rotina_imunopreviniveis\sim_sivep_06mai25
+  name: sim_sivep_imuno_rotina_06mai25.db
+  excel_name: cruzamento_prob_sivep_sim_06mai2025.xlsx
+
+models:
+  path: C:\Users\higor.monteiro\Documents\code\lente-ist\lente_ist\ml_models
+  gbt_filename: GRADBOOST_SIVEP04SET2023.joblib
+  rnf_filename: RANDFOREST_SIVEP04SET2023.joblib
+  lgt_filename: LOGITREG_SIVEP04SET2023.joblib
+
+linkage:
+  blocking_window: 11
+  threshold: 0.60
+  comparison_string_method: damerau_levenshtein # -- string names according to the 'recordlinkage' library.
+  number_of_blocks: 12
+  frac_list: [0.5, 1.0]
+  fonetica_column: NOME_PACIENTE
+  simplify_fonetica: true # if 'true' uses only the first word of the name, while 'false' will use both first and last words.

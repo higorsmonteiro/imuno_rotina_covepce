@@ -2,7 +2,7 @@
     ...
 '''
 import datetime as dt
-from warehouse_base import WarehouseBase
+from data.warehouse_base import WarehouseBase
 
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Table, MetaData
